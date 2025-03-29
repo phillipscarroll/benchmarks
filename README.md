@@ -46,6 +46,29 @@ Some of these test will not apply to every card due to either software or vram l
 - 2 x Acer Predator GM7000 4TB Gen4 NVME
     - Noctua NT-H1 as thermal interface (This is a very specific use case for these drives)
 
-
-
 <img src="img/pc.jpg">
+
+If you look in some of my other projects you may see this build with a different motherboard or cooler. My first motherboard lost power output on cha_fan1 and the top USB ports stopped functioning. This ROG Strix board was $100 more but does keep the VRM/chipset and nvme's much cooler.
+
+### Testing Methodology
+
+All devices will run factory tunes and fan profiles. There will be no modifications to the Intel software, AMD Adrenalin, or MSI afterburner etc... The only results which will have tweaked settings will be the base line tests on CPU. My PBO settings are listed above.
+
+Currently ROCm is not available for the new RX 9070 XT so we will be testing ML with Vulkan and DirectML where applicable. I will be gathering data on the Nvidia GPUs with Cuda, Vulkan and DirectML as well so we have apples to apples and fully accelerated. I do wish I kept a 7900 XTX around as those have pretty good windows ROCm support over WSL2.
+
+All devices will use mixed precision where applicable in PyTorch testing.
+
+Testing LLMs with the iGPU will be omitted as its much slower than running directly on CPU.
+
+Ideally our testing will include:
+
+- PyTorch
+- LM Studio
+- Stable Diffusion
+
+
+
+
+
+
+
