@@ -63,8 +63,27 @@ Testing LLMs with the iGPU will be omitted as its much slower than running direc
 Ideally our testing will include:
 
 - PyTorch
+    - Regression Test
+    - Classification Test
+    - Tokenization Test
 - LM Studio
+    - Not all models will be tested on all GPUs as spillover to system RAM will pretty much render the comparable useless.
+    - If a model does not fit in a particular GPU it will be called out.
+    - Models
+        - Llama-3.2-1B-Instruct-Q8_0-GGUF/llama-3.2-1b-instruct-q8_0.gguf
+        - Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf
+        - Qwen2.5-Coder-3B-Instruct-GGUF/qwen2.5-coder-3b-instruct-q4_k_m.gguf
+        - DeepSeek-R1-Distill-Llama-8B-GGUF/DeepSeek-R1-Distill-Llama-8B-Q4_K_M.gguf
+        - gemma-3-1b-it-GGUF/gemma-3-1b-it-Q4_K_M.gguf
+    - Test Prompts
+        - `Calculate 987654321 multiplied by 123456789. The only output you provide is the final answer in numerical form.`
+        - `Explain in detail how technology has evolved from the beginning of time starting with the big bang. Limit your responses to 1 sentence per epoch of technology. The only output you provide is the bulleted list of these single sentences that represent an epoch of technology. Cite references after each sentence.`
+        - `I am writing a story about 2 characters locked in the room. One characters is extremely conservative in thoughts and politics with an unbending attitude even when it becomes a serious fault. The other character is very liberal, an anarchist and extremely vocally opinionated even without knowing why they have those opinions. They each have a poisonous pill. They can offer their pill to the other person but that means they must take the receivers pill. One of two pills might be inert but it is not fully known. They have 4 weeks to be locked in this room. There is only water and no food or toilets. The story is written from the perspective of the all knowing narrator. Sometimes the narrator can interact in the world. Please write the rest of the story from the perspective of this narrator and always reference the conservative character with the name "Cyberpunk 2077" and the liberal character with the name "Gwen Beefaroni".`
 - Stable Diffusion
+        - Amuse Direct ML 4 Images "Fast" Mode
+            - Drameshaper v7 LCM
+        - Amuse Direct ML 4 Images "Balanced" Mode
+            - SDXL Turbo
 
 
 
