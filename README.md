@@ -8,7 +8,7 @@ Some of these test will not apply to every card due to either software or vram l
 
 <b>Why so many GPU?</b> I love GPUs, there is just so much you can do with them. Crack passwords, mine fake money, play games, generate video/images/audio/code, chat with vector data in multi-dimensional tensor space, train models that can solve problems to difficult for code.
 
-#### Current GPUs
+### Current GPUs
 
 - AMD
     - ASRock Taichi OC RX 9070 XT 16GB
@@ -28,7 +28,7 @@ Some of these test will not apply to every card due to either software or vram l
 
 <img src="img/gpus.jpg">
 
-#### Test Rig
+### Test Rig
 
 - AMD Ryzen 9 9950X3D
     - PBO on
@@ -36,6 +36,7 @@ Some of these test will not apply to every card due to either software or vram l
     - PBO no scaling
     - PBO max temp 85c (never exceeds 72c under long duration)
     - CO -25 all cores
+    - iGPU is primary to allow for max performance on GPU during non-gaming workloads
 - be quiet! Dark Rock Elite Cooler
     - Thermalright Heilos V1 Phase Change Thermal Interface
 - Monster Studio A45 Open Air Frame
