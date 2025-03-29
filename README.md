@@ -20,12 +20,30 @@ Some of these test will not apply to every card due to either software or vram l
     - ASRock Challenger ARC A380 6GB
 - Nvidia
     - ASUS Prime OC RTX 5070 Ti 16GB
+    - Titan V 12GB
     - MSI Ventus OC RTX 2080 8GB
     - Titan XP 12GB (Latest version, different than Titan X Pascal)
     - PNY XLR8 GTX 1660 Super OC 6GB
     - GTX Titan 6GB (The OG)
 
 <img src="img/gpus.jpg">
+
+#### Test Rig
+
+- AMD Ryzen 9 9950X3D
+    - PBO on
+    - PBO factory Power/Voltage Limits
+    - PBO no scaling
+    - PBO max temp 85c (never exceeds 72c under long duration)
+    - CO -25 all cores
+- be quiet! Dark Rock Elite Cooler
+    - Thermalright Heilos V1 Phase Change Thermal Interface
+- Monster Studio A45 Open Air Frame
+- ASRock Steel Legend SL-1000G 1000w PSU
+- ASUS ROG Strix B850i ITX Motherboard
+- CORSAIR Vengeance 96GB (2 x 48GB) DDR5 6000 CL30 (CMK96GX5M2B6000Z30)
+- 2 x Acer Predator GM7000 4TB Gen4 NVME
+    - Noctua NT-H1 as thermal interface (This is a very specific use case for these drives)
 
 
 
