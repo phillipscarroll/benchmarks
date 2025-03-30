@@ -34,7 +34,7 @@ Some of these test will not apply to every card due to either software or vram l
     - PBO on
     - PBO factory Power/Voltage Limits
     - PBO no scaling
-    - PBO max temp 85c (never exceeds 72c under long duration)
+    - PBO max temp 62c
     - CO -25 all cores
     - iGPU is primary to allow for max performance on GPU during non-gaming workloads
 - be quiet! Dark Rock Elite Cooler
@@ -96,45 +96,95 @@ Ideally our testing will include:
   - Flash Attention Off
   - Test Prompt
     - "Tell me a real story about someone who never existed tasting the color red while walking through light while in a vacuum of low pressure clouds. This person is always there and knows what you will output so you must craft the story without there knowledge. In the story all things that are possible are impossible and must come before they were created. Describe time as a feeling that only dreams can see awake. Please write the story in under 500 words."
+  - Some tests are ommitted due to VRAM limitations.
+  - CPU Testing
+    - 9950X3D
+        - CO -25 All Core
+        - PBO 62c temp limit
+        - PBO AMD factory power limits
+        - PBO No scalar
+        - PBO +200 max Mhz
+    - Corsair DDR5 SK Hynix 6000 CL30 96GB (2 x 48GB)
 
 | Application | GPU | API | Offload |  Model | Parameters | Quant | Tok/sec | Tokens | Time To 1st Token |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Gemma 3 Instruct | 1B | Q4 | 262.58 | 513 | 0.15s |
 | LM Studio | Titan V | Cuda | 100% | Gemma 3 Instruct | 1B | Q4 | 90.72 | 530 | 0.03s |
 | LM Studio | Titan V | Vulkan | 100% | Gemma 3 Instruct | 1B | Q4 | 110.62 | 518 | 0.79s |
+| LM Studio | RTX 2080 | Cuda | 100% | Gemma 3 Instruct | 1B | Q4 | 104.08 | 518 | 0.79s |
+| LM Studio | RTX 2080 | Vulkan | 100% | Gemma 3 Instruct | 1B | Q4 | 141.22 | 493 | 0.42s |
+| LM Studio | ARC B580 | Vulkan | 100% | Gemma 3 Instruct | 1B | Q4 | 148.51 | 464 | 0.45s |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Gemma 3 Instruct | 4B | Q4 | 138.04 | 490 | 0.12s |
 | LM Studio | Titan V | Cuda | 100% | Gemma 3 Instruct | 4B | Q4 | 61.63 | 494 | 0.10s |
 | LM Studio | Titan V | Vulkan | 100% | Gemma 3 Instruct | 4B | Q4 | 67.48 | 495 | 0.65s |
+| LM Studio | RTX 2080 | Cuda | 100% | Gemma 3 Instruct | 4B | Q4 | 65.79 | 487 | 0.06s |
+| LM Studio | RTX 2080 | Vulkan | 100% | Gemma 3 Instruct | 4B | Q4 | 78.77 | 498 | 0.30s |
+| LM Studio | ARC B580 | Vulkan | 100% | Gemma 3 Instruct | 4B | Q4 | 85.88 | 498 | 0.51s |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Gemma 3 Instruct | 12B | Q4 | 57.72 | 453 | 0.29s |
 | LM Studio | Titan V | Cuda | 100% | Gemma 3 Instruct | 12B | Q4 | 21.99 | 485 | 0.45s |
 | LM Studio | Titan V | Vulkan | 100% | Gemma 3 Instruct | 12B | Q4 | 30.49 | 517 | 1.98s |
+| LM Studio | RTX 2080 | Cuda | 100% | Gemma 3 Instruct | 12B | Q4 | 15.10 | 514 | 0.48s |
+| LM Studio | RTX 2080 | Vulkan | 100% | Gemma 3 Instruct | 12B | Q4 | 14.44 | 468 | 1.48s |
+| LM Studio | ARC B580 | Vulkan | 100% | Gemma 3 Instruct | 12B | Q4 | 30.94 | 521 | 1.86s |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Llama 3.2 Instruct | 1B | Q4 | 368.71 | 514 | 0.00s |
 | LM Studio | Titan V | Cuda | 100% | Llama 3.2 Instruct | 1B | Q4 | 139.34 | 518 | 0.03s |
 | LM Studio | Titan V | Vulkan | 100% | Llama 3.2 Instruct | 1B | Q4 | 154.46 | 553 | 0.41s |
+| LM Studio | RTX 2080 | Cuda | 100% | Llama 3.2 Instruct | 1B | Q4 | 149.57 | 502 | 0.02s |
+| LM Studio | RTX 2080 | Vulkan | 100% | Llama 3.2 Instruct | 1B | Q4 | 163.41 | 478 | 0.43s |
+| LM Studio | ARC B580 | Vulkan | 100% | Llama 3.2 Instruct | 1B | Q4 | 148.95 | 495 | 0.14s |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Llama 3.2 Instruct | 3B | Q4 | 180.40 | 495 | 0.10s |
 | LM Studio | Titan V | Cuda | 100% | Llama 3.2 Instruct | 3B | Q4 | 74.47 | 529 | 0.07s |
 | LM Studio | Titan V | Vulkan | 100% | Llama 3.2 Instruct | 3B | Q4 | 80.76 | 558 | 0.49s |
+| LM Studio | RTX 2080 | Cuda | 100% | Llama 3.2 Instruct | 3B | Q4 | 77.43 | 546 | 0.38s |
+| LM Studio | RTX 2080 | Vulkan | 100% | Llama 3.2 Instruct | 3B | Q4 | 73.86 | 474 | 0.05s |
+| LM Studio | ARC B580 | Vulkan | 100% | Llama 3.2 Instruct | 3B | Q4 | 65.57 | 482 | 0.35s |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Phi 4 | 15B | Q4 | 54.17 | 565 | 0.83s |
 | LM Studio | Titan V | Cuda | 100% | Phi 4 | 15B | Q4 | 11.26 | 451 | 0.80s |
 | LM Studio | Titan V | Vulkan | 100% | Phi 4 | 15B | Q4 | 35.89 | 467 | 1.59s |
+| LM Studio | ARC B580 | Vulkan | 100% | Phi 4 | 15B | Q4 | 25.26 | 445 | 2.03s |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | DeepSeek R1 Distill Llama | 8B | Q4 | 91.03 | 950 | 0.18s |
 | LM Studio | Titan V | Cuda | 100% | DeepSeek R1 Distill Llama | 8B | Q4 | 56.23 | 891 | 0.18s |
 | LM Studio | Titan V | Vulkan | 100% | DeepSeek R1 Distill Llama | 8B | Q4 | 54.78 | 1253 | 0.13s |
+| LM Studio | RTX 2080 | Cuda | 100% | DeepSeek R1 Distill Llama | 8B | Q4 | 52.33 | 1306 | 0.09s |
+| LM Studio | RTX 2080 | Vulkan | 100% | DeepSeek R1 Distill Llama | 8B | Q4 | 56.12 | 895 | 0.54s |
+| LM Studio | ARC B580 | Vulkan | 100% | DeepSeek R1 Distill Llama | 8B | Q4 | 59.73 | 956 | 0.95s |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | DeepSeek R1 Distill Qwen | 14B | Q4 | 51.94 | 801 | 0.40s |
 | LM Studio | Titan V | Cuda | 100% | DeepSeek R1 Distill Qwen | 14B | Q4 | 18.08 | 1022 | 0.48s |
 | LM Studio | Titan V | Vulkan | 100% | DeepSeek R1 Distill Qwen | 14B | Q4 | 32.93 | 1112 | 1.75s |
+| LM Studio | ARC B580 | Vulkan | 100% | DeepSeek R1 Distill Qwen | 14B | Q4 | 19.66 | 1901 | 1.95s |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | DeepSeek R1 Distill Qwen | 7B | Q4 | 94.61 | 1190 | 0.17s |
 | LM Studio | Titan V | Cuda | 100% | DeepSeek R1 Distill Qwen | 7B | Q4 | 59.96 | 1090 | 0.18s |
 | LM Studio | Titan V | Vulkan | 100% | DeepSeek R1 Distill Qwen | 7B | Q4 | 59.27 | 1582 | 0.88s |
+| LM Studio | RTX 2080 | Cuda | 100% | DeepSeek R1 Distill Qwen | 7B | Q4 | 56.45 | 1273 | 0.29s |
+| LM Studio | RTX 2080 | Vulkan | 100% | DeepSeek R1 Distill Qwen | 7B | Q4 | 54.18 | 974 | 0.71s |
+| LM Studio | ARC B580 | Vulkan | 100% | DeepSeek R1 Distill Qwen | 7B | Q4 | 62.70 | 1365 | 0.87s |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Qwen 2.5 Coder Instruct | 3B | Q4 | 175.49 | 477 | 0.11s |
 | LM Studio | Titan V | Cuda | 100% | Qwen 2.5 Coder Instruct | 3B | Q4 | 73.84 | 431 | 0.17s |
 | LM Studio | Titan V | Vulkan | 100% | Qwen 2.5 Coder Instruct | 3B | Q4 | 80.39 | 488 | 0.66s |
+| LM Studio | RTX 2080 | Cuda | 100% | Qwen 2.5 Coder Instruct | 3B | Q4 | 81.28 | 537 | 0.06s |
+| LM Studio | RTX 2080 | Vulkan | 100% | Qwen 2.5 Coder Instruct | 3B | Q4 | 98.00 | 308 | 0.51s |
+| LM Studio | ARC B580 | Vulkan | 100% | Qwen 2.5 Coder Instruct | 3B | Q4 | 103.54 | 676 | 0.48s |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Qwen 2.5 Coder Instruct | 14B | Q4 | 52.97 | 494 | 0.40s |
 | LM Studio | Titan V | Cuda | 100% | Qwen 2.5 Coder Instruct | 14B | Q4 | 18.97 | 517 | 0.59s |
 | LM Studio | Titan V | Vulkan | 100% | Qwen 2.5 Coder Instruct | 14B | Q4 | 33.38 | 513 | 1.74s |
+| LM Studio | ARC B580 | Vulkan | 100% | Qwen 2.5 Coder Instruct | 14B | Q4 | 22.61 | 546 | 2.01s |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Qwen 2.5 Instruct 1M | 7B | Q4 | 97.47 | 590 | 0.17s |
 | LM Studio | Titan V | Cuda | 100% | Qwen 2.5 Instruct 1M | 7B | Q4 | 60.67 | 530 | 0.17s |
 | LM Studio | Titan V | Vulkan | 100% | Qwen 2.5 Instruct 1M | 7B | Q4 | 60.06 | 658 | 0.86s |
+| LM Studio | RTX 2080 | Cuda | 100% | Qwen 2.5 Instruct 1M | 7B | Q4 | 59.13 | 534 | 0.09s |
+| LM Studio | RTX 2080 | Vulkan | 100% | Qwen 2.5 Instruct 1M | 7B | Q4 | 60.41 | 602 | 0.58s |
+| LM Studio | ARC B580 | Vulkan | 100% | Qwen 2.5 Instruct 1M | 7B | Q4 | 64.10 | 610 | 0.87s |
 
 ### Amuse Stable Diffusion DirectML Testing
 
@@ -148,10 +198,14 @@ Ideally our testing will include:
   - Prompt: "Terminator endoskeleton high fiving a clown at a birthday party. Neon lights in a cyberpunk scene shining on wet surfaces reflecting light can be seen."
   - 3 runs will be made, the elapsed time and iterations per second will be taken from the 3rd run.
 
-| Application | GPU | API | Image Count | Performance | Elapsed Time Seconds | Iterations/Second |
-| --- | --- | --- | --- | --- | --- | --- |
-| Amuse | Titan V | DirectML | 4 | Fast | 3.2s | 11.5 |
-| Amuse | Titan V | DirectML | 4 | Balanced | 3.3s | 7.9 |
+| Application | GPU | API | Image Count | Performance | Elapsed Time Seconds | Iterations Per Second | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Amuse | Titan V | DirectML | 4 | Fast | 3.2s | 11.5 |  |
+| Amuse | Titan V | DirectML | 4 | Balanced | 3.3s | 7.9 |  |
+| Amuse | RTX 2080 | DirectML | 4 | Fast | 3.3s | 11.4 |  |
+| Amuse | RTX 2080 | DirectML | 4 | Balanced | 10.3s | 1.9 | VRAM Limitation |
+| Amuse | ARC B580 | DirectML | 4 | Fast | 2.7s | 17 |  |
+| Amuse | ARC B580 | DirectML | 4 | Balanced | 2.6s | 11.5 |  |
 
 ### PyTorch Testing
 
@@ -164,3 +218,5 @@ Ideally our testing will include:
 | Application | GPU | API | Test | Elapsed Time Seconds |
 | --- | --- | --- | --- | --- |
 | PyTorch | Titan V | Cuda | BERT Tokenizer | 83.19s |
+| PyTorch | RTX 2080 | Cuda | BERT Tokenizer | 124.49s |
+| PyTorch | ARC B580 | XPU | BERT Tokenizer | 113.41s |
