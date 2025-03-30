@@ -102,47 +102,36 @@ Ideally our testing will include:
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Gemma 3 Instruct | 1B | Q4 | 262.58 | 513 | 0.15s |
 | LM Studio | Titan V | Cuda | 100% | Gemma 3 Instruct | 1B | Q4 | 90.72 | 530 | 0.03s |
 | LM Studio | Titan V | Vulkan | 100% | Gemma 3 Instruct | 1B | Q4 | 110.62 | 518 | 0.79s |
-
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Gemma 3 Instruct | 4B | Q4 | 138.04 | 490 | 0.12s |
 | LM Studio | Titan V | Cuda | 100% | Gemma 3 Instruct | 4B | Q4 | 61.63 | 494 | 0.10s |
 | LM Studio | Titan V | Vulkan | 100% | Gemma 3 Instruct | 4B | Q4 | 67.48 | 495 | 0.65s |
-
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Gemma 3 Instruct | 12B | Q4 | 57.72 | 453 | 0.29s |
 | LM Studio | Titan V | Cuda | 100% | Gemma 3 Instruct | 12B | Q4 | 21.99 | 485 | 0.45s |
 | LM Studio | Titan V | Vulkan | 100% | Gemma 3 Instruct | 12B | Q4 | 30.49 | 517 | 1.98s |
-
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Llama 3.2 Instruct | 1B | Q4 | 368.71 | 514 | 0.00s |
 | LM Studio | Titan V | Cuda | 100% | Llama 3.2 Instruct | 1B | Q4 | 139.34 | 518 | 0.03s |
 | LM Studio | Titan V | Vulkan | 100% | Llama 3.2 Instruct | 1B | Q4 | 154.46 | 553 | 0.41s |
-
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Llama 3.2 Instruct | 3B | Q4 | 180.40 | 495 | 0.10s |
 | LM Studio | Titan V | Cuda | 100% | Llama 3.2 Instruct | 3B | Q4 | 74.47 | 529 | 0.07s |
 | LM Studio | Titan V | Vulkan | 100% | Llama 3.2 Instruct | 3B | Q4 | 80.76 | 558 | 0.49s |
-
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Phi 4 | 15B | Q4 | 54.17 | 565 | 0.83s |
 | LM Studio | Titan V | Cuda | 100% | Phi 4 | 15B | Q4 | 11.26 | 451 | 0.80s |
 | LM Studio | Titan V | Vulkan | 100% | Phi 4 | 15B | Q4 | 35.89 | 467 | 1.59s |
-
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | DeepSeek R1 Distill Llama | 8B | Q4 | 91.03 | 950 | 0.18s |
 | LM Studio | Titan V | Cuda | 100% | DeepSeek R1 Distill Llama | 8B | Q4 | 56.23 | 891 | 0.18s |
 | LM Studio | Titan V | Vulkan | 100% | DeepSeek R1 Distill Llama | 8B | Q4 | 54.78 | 1253 | 0.13s |
-
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | DeepSeek R1 Distill Qwen | 14B | Q4 | 51.94 | 801 | 0.40s |
 | LM Studio | Titan V | Cuda | 100% | DeepSeek R1 Distill Qwen | 14B | Q4 | 18.08 | 1022 | 0.48s |
 | LM Studio | Titan V | Vulkan | 100% | DeepSeek R1 Distill Qwen | 14B | Q4 | 32.93 | 1112 | 1.75s |
-
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | DeepSeek R1 Distill Qwen | 7B | Q4 | 94.61 | 1190 | 0.17s |
 | LM Studio | Titan V | Cuda | 100% | DeepSeek R1 Distill Qwen | 7B | Q4 | 59.96 | 1090 | 0.18s |
 | LM Studio | Titan V | Vulkan | 100% | DeepSeek R1 Distill Qwen | 7B | Q4 | 59.27 | 1582 | 0.88s |
-
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Qwen 2.5 Coder Instruct | 3B | Q4 | 175.49 | 477 | 0.11s |
 | LM Studio | Titan V | Cuda | 100% | Qwen 2.5 Coder Instruct | 3B | Q4 | 73.84 | 431 | 0.17s |
 | LM Studio | Titan V | Vulkan | 100% | Qwen 2.5 Coder Instruct | 3B | Q4 | 80.39 | 488 | 0.66s |
-
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Qwen 2.5 Coder Instruct | 14B | Q4 | 52.97 | 494 | 0.40s |
 | LM Studio | Titan V | Cuda | 100% | Qwen 2.5 Coder Instruct | 14B | Q4 | 18.97 | 517 | 0.59s |
 | LM Studio | Titan V | Vulkan | 100% | Qwen 2.5 Coder Instruct | 14B | Q4 | 33.38 | 513 | 1.74s |
-
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Qwen 2.5 Instruct 1M | 7B | Q4 | 97.47 | 590 | 0.17s |
 | LM Studio | Titan V | Cuda | 100% | Qwen 2.5 Instruct 1M | 7B | Q4 | 60.67 | 530 | 0.17s |
 | LM Studio | Titan V | Vulkan | 100% | Qwen 2.5 Instruct 1M | 7B | Q4 | 60.06 | 658 | 0.86s |
