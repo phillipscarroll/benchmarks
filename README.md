@@ -152,3 +152,15 @@ Ideally our testing will include:
 | --- | --- | --- | --- | --- | --- | --- |
 | Amuse | Titan V | DirectML | 4 | Fast | 3.2s | 11.5 |
 | Amuse | Titan V | DirectML | 4 | Balanced | 3.3s | 7.9 |
+
+### PyTorch Testing
+
+- PyTorch testing will be somewhat unique to each technology as they all have different requirements.
+    - BERT Tokenizer
+        - This test can run on ROCm/Cuda, XPU and CPU
+        - This is mostly a heat generator and not functional but it does stress GPUs
+        - This test does not play well with DirectML in PyTorch so we will need to wait for ROCm updates for RDNA4 testing
+
+| Application | GPU | API | Test | Elapsed Time Seconds |
+| --- | --- | --- | --- | --- |
+| PyTorch | Titan V | Cuda | BERT Tokenizer | 83.19s |
