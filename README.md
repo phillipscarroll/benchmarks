@@ -20,11 +20,9 @@
     - PNY XLR8 GTX 1660 Super OC 6GB
     - GTX Titan 6GB (The OG)
 
-### Current GPU Roster
-
 <img src="img/gpus.jpg">
 
-### Finally got a good Titan V
+### Finally got a good Titan V without blown components
 
 <img src="img/titanv-1.jpg">
 
