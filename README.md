@@ -223,13 +223,14 @@
 | --- | --- | --- | --- | --- | --- |
 |  |  |  |  | Lower is better |  |
 | PyTorch | 9950X3D | CPU | BERT Tokenizer | 993.65s | This is actually incredibly fast for cpu |
+| PyTorch | 9950X3D | CPU | BERT Tokenizer | 995.43s | 105w Eco Mode - NO PBO or CO - No meaningful difference |
 | PyTorch | Titan V | Cuda | BERT Tokenizer | 83.19s |  |
 | PyTorch | RTX 2080 | Cuda | BERT Tokenizer | 124.49s |  |
 | PyTorch | ARC B580 | XPU | BERT Tokenizer | 113.41s |  |
 | PyTorch | RTX 5070 Ti | Cuda | BERT Tokenizer | 55.36 |  |
 | PyTorch | RTX 5070 Ti | Cuda | BERT Tokenizer | 51.03 | Tuned OC UV - 116% Pwr - 990mv 3190 Mhz - +1500 VRAM |
 |  |  |  |  |  | Previously tested devices below, same code |
-| PyTorch | i9-14900K | CPU | BERT Tokenizer | 2381.41s |  |
+| PyTorch | i9-14900K | CPU | BERT Tokenizer | 2381.41s | 5200mhz locked pcore - 4500mhz locked ecore |
 | PyTorch | ARC A770 | XPU | BERT Tokenizer | 176.26s | WSL2 |
 | PyTorch | RTX 3080 FE | Cuda | BERT Tokenizer | 75.68s |  |
 | PyTorch | Google Colab Tesla T4 | Cuda | BERT Tokenizer | 177.52s |  |
