@@ -5,7 +5,8 @@
 ### Current GPU Roster
 
 - AMD
-    - ASRock Taichi OC RX 9070 XT 16GB
+    - ~~ASRock Taichi OC RX 9070 XT 16GB~~ 
+      - Traded for smaller Powercolor Reaper RX 9070 XT 16GB
     - Sapphire Nitro+ RX Vega 64 8GB
     - MSI RX Vega 56 Air Boost OC 8GB
 - Intel
@@ -69,6 +70,7 @@
 | LM Studio | RX 9070 XT Taichi | Vulkan | 100% | Gemma 3 Instruct | 1B | Q4 | 262.58 | 513 | 0.15s |  |
 | LM Studio | Titan V | Cuda | 100% | Gemma 3 Instruct | 1B | Q4 | 90.72 | 530 | 0.03s |  |
 | LM Studio | Titan V | Vulkan | 100% | Gemma 3 Instruct | 1B | Q4 | 110.62 | 518 | 0.79s |  |
+| Ollama Ubuntu | Titan V | Cuda | 100% | Gemma 3 Instruct | 1B | Q4 | 149.19 | 1810 |  |  |
 | LM Studio | RTX 2080 | Cuda | 100% | Gemma 3 Instruct | 1B | Q4 | 104.08 | 518 | 0.79s |  |
 | LM Studio | RTX 2080 | Vulkan | 100% | Gemma 3 Instruct | 1B | Q4 | 141.22 | 493 | 0.42s |  |
 | LM Studio | ARC B580 | Vulkan | 100% | Gemma 3 Instruct | 1B | Q4 | 148.51 | 464 | 0.45s |  |
